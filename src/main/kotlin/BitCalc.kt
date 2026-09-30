@@ -19,4 +19,6 @@ object BitCalc {
     fun or(a: BigInteger, b: BigInteger) = a.or(b)
     fun xor(a: BigInteger, b: BigInteger) = a.xor(b)
     fun not(a: BigInteger) = a.not()
+    fun lsh(a: BigInteger, b: BigInteger) = a.shiftLeft(b.toInt())
+    fun rsh(a: BigInteger, b: BigInteger) = a.shiftRight(b.toInt())
 }

@@ -8,6 +8,8 @@ Run the application and enter commands:
 - `OR <val1> <val2>`
 - `XOR <val1> <val2>`
 - `NOT <val>`
+- `LSH <val> <bits>` (Left Shift)
+- `RSH <val> <bits>` (Right Shift)
 - `EXIT`
 
 Supports formats: Decimal, Hex (`0x...`), and Binary (`0b...`).
