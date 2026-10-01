@@ -7,6 +7,7 @@ Run the application and enter commands:
 - `AND <val1> <val2>`
 - `OR <val1> <val2>`
 - `XOR <val1> <val2>`
+- `XORN <val1> <val2>` (XOR with mask)
 - `XNOR <val1> <val2>`
 - `NAND <val1> <val2>`
 - `NOR <val1> <val2>`

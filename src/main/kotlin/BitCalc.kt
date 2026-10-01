@@ -12,7 +12,10 @@ object BitCalc {
     }
 
     fun format(value: BigInteger): String {
-        return "Dec: ${value} | Hex: 0x${value.toString(16).uppercase()} | Bin: 0b${value.toString(2)}"
+        val bin = value.toString(2)
+        val paddedBin = if (bin.length % 8 != 0) "0".repeat(8 - (bin.length % 8)) + bin else bin
+        val groupedBin = paddedBin.chunked(4).joinToString(" ")
+        return "Dec: ${value} | Hex: 0x${value.toString(16).uppercase()} | Bin: 0b$groupedBin"
     }
 
     fun and(a: BigInteger, b: BigInteger) = a.and(b)
@@ -24,4 +27,5 @@ object BitCalc {
     fun not(a: BigInteger) = a.not()
     fun lsh(a: BigInteger, b: BigInteger) = a.shiftLeft(b.toInt())
     fun rsh(a: BigInteger, b: BigInteger) = a.shiftRight(b.toInt())
+    fun xorn(a: BigInteger, b: BigInteger) = a.xor(b)
 }

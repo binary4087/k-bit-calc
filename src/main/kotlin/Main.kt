@@ -5,7 +5,7 @@ import java.util.Scanner
 fun main(args: Array<String>) {
     val scanner = Scanner(System.`in`)
     println("K-Bit Calc: Arbitrary-precision Bitwise Utility")
-    println("Commands: AND, OR, XOR, XNOR, NAND, NOR, NOT, LSH, RSH, EXIT")
+    println("Commands: AND, OR, XOR, XORN, XNOR, NAND, NOR, NOT, LSH, RSH, EXIT")
     println("Input format: <OP> <VAL1> <VAL2> (e.g., AND 0xFF 0b1010)")
 
     while (true) {
@@ -24,6 +24,7 @@ fun main(args: Array<String>) {
                 "AND" -> executeBinaryOp(parts, BitCalc::and)
                 "OR"  -> executeBinaryOp(parts, BitCalc::or)
                 "XOR" -> executeBinaryOp(parts, BitCalc::xor)
+                "XORN" -> executeBinaryOp(parts, BitCalc::xorn)
                 "XNOR" -> executeBinaryOp(parts, BitCalc::xnor)
                 "NAND" -> executeBinaryOp(parts, BitCalc::nand)
                 "NOR" -> executeBinaryOp(parts, BitCalc::nor)
